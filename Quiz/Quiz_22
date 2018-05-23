@@ -1,1 +1,13 @@
+#完成函数 biggest(n)，使函数返回用 n 的各位数能拼成的最大的数。比如 biggest(162) 应该返回 621。
+
+def biggest1(n):
+
+	return sum(int(j)*10**i for i,j in enumerate(sorted(int(i) for i in str(n))))
+
+
+
+
+def biggest2(n):
+
+	return int(''.join(str(i) for i in sorted([int(i) for i in str(n)],reverse=True)))
 
